@@ -1,0 +1,21 @@
+
+
+<button class="btn btn-sm btn-primary">New</button>
+
+
+<div *ngFor="let data of blogs" class="starter-template">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 style="text-align: center;">{{data.text}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <p class="lead">{{data.userName}} | {{data.dateCreated}}</p>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-sm btn-primary" (click)='editBlog(data.id)'>Edit</button>
+            <button class="btn btn-sm btn-danger" (click)='removeBlog(data.id)'>Delete</button>
+        </div>
+    </div>
+</div>
